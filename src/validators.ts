@@ -1,4 +1,5 @@
 import * as readline from "readline";
+import { Turma } from ".";
 
 export function obrigatorio(valor: string, nomeCampo: string): string {
   const v = valor.trim();
@@ -17,6 +18,14 @@ export function parseNumeroInteiro(valor: string, nomeCampo: string): number {
   }
 
   return n;
+}
+
+export function parseTurma(valor: string): Turma {
+  if(valor != "1TADS" && valor != "2TADS" && valor != "3TADS") {
+    throw new Error(`Turma deve ser 1TADS, 2TADS ou 3TADS. Você informou: ${valor}`)
+  }
+
+  return valor
 }
 
 export function entre(n: number, min: number, max: number, nomeCampo: string): number {

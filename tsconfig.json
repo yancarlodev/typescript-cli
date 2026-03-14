@@ -4,7 +4,6 @@
     "moduleResolution": "node",
     "target": "es2020",
     "types": ["node"],
-
     "strict": true,
     "verbatimModuleSyntax": false,
 
